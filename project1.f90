@@ -106,8 +106,8 @@
     WRITE(*,*) 'STEP: ', ST, '  TIME: ', TIME
 
     OPEN(2000,FILE='history.dat',POSITION='APPEND')
+    WRITE(2000,100,ADVANCE='NO') TIME
     DO I = 1, NOV
-            WRITE(2000,100,ADVANCE='NO') TIME
         IF (I .NE. NOV) THEN
             WRITE(2000,101,ADVANCE='NO') POSX(I), POSY(I)
         ELSE
